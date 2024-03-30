@@ -3,21 +3,24 @@ javaScript_EP_01
     How JavaScript works?
     Ans-Everything in JavaScript happens inside an "execution context".
     Execution context has two component
-    1. memory component[variable environment] -This is the place where all variables and functions are stored    as key value pairs. eg-{key: value || n:2;}
+    1. memory component[variable environment] -This is the place where all variables and functions are stored 
+        as key value pairs. eg-{key: value || n:2;}
     2. code component[Thread of execution] -This is the place where code is executed one line at a time.
     Note- *JavaScript is a synchronous single-threaded language -Single threaded means JavaScript can execute one command at a time.
     -Synchronous single-threaded that means JavaScript can execute one command at a time in a specific order.
 
 
- How JavaScript Code is executed? ❤️& Call Stack | Namaste JavaScript Ep. 2 
+     How JavaScript Code is executed? ❤️& Call Stack | Namaste JavaScript Ep. 2 
 
          1. When JavaScript code is executed, Execution Context is created and it is called Global Execution Context. 
-        2. JavaScript program is executed in TWO PHASES inside Execution Context 
+         2. JavaScript program is executed in TWO PHASES inside Execution Context 
           a. MEMORY ALLOCATION PHASE - JavaScript program goes throughout the program and allocate memory of    Variables and Functions declared in program. 
           b. CODE EXECUTION PHASE - JavaScript program now goes throughout the code line by line and execute the code. 
         3. A Function is invoked when it is called and it acts as another MINI PROGRAM and creates its own     Execution Context.
-        4. Return keyword return the Control back to the PREVIOUS Execution-Context where the Function is called and Execution  Context of the Function is DELETED. 
-        5. CALL STACK maintains the ORDER of execution of Execution Contexts. It CREATES Execution Context whenever a Program starts or a Function is invoked and it pops out the Execution Context when a Function or Program ENDS.
+        4. Return keyword return the Control back to the PREVIOUS Execution-Context where the Function is called and Execution  
+            Context of the Function is DELETED. 
+        5. CALL STACK maintains the ORDER of execution of Execution Contexts. It CREATES Execution Context whenever 
+          a Program starts or a Function is invoked and it pops out the Execution Context when a Function or Program ENDS.
 
         Call stack 
         Execution control stack
@@ -29,8 +32,10 @@ javaScript_EP_01
  Hoisting in JavaScript 🔥(variables & functions) | Namaste JavaScript Ep. 3 
  
     1. In JS, before the code is executed, the variables get initialized to undefined. 
-    2.  Arrow functions enact as variables and get "undefined" during the memory creation phase while functions actually get run.
-    3.  Hoisting: Mechanism in JS where the variable declarations are moved to the top of the scope before execution. Therefore it is possible to call a function before initializing it. 
+    2.  Arrow functions enact as variables and get "undefined" during the memory creation phase
+      while functions actually get run.
+    3.  Hoisting: Mechanism in JS where the variable declarations are moved to the top of the scope before execution. 
+        Therefore it is possible to call a function before initializing it. 
        
            declarations are hoisted, not the initializations. 
 
@@ -38,7 +43,8 @@ javaScript_EP_01
            var x = 5;
            console.log(x); // 5
 
-    4. Whenever a JS program is run, a global execution block is created, which comprises of : Memory creation and Code execution.
+    4. Whenever a JS program is run, a global execution block is created, which comprises of : 
+        Memory creation and Code execution.
     5.  Variable declarations are scanned and are made undefined .
     6.  Function declarations are scanned and are made available
 
@@ -47,9 +53,12 @@ javaScript_EP_01
   How functions work in JS ❤️ & Variable Environment | Namaste JavaScript Ep. 4 
 
     1.We learnt how functions work in JS.
-    2.At first a global execution context is created, which consists of Memory and code and has 2 phases: Memory allocation phase and code execution phase. 
+    2.At first a global execution context is created, which consists of Memory and code and has 2 phases:
+          Memory allocation phase and code execution phase. 
     3.In the first phase, the variables are assigned "undefined" while functions have their own code. 
-    4.Whenever there is a function declaration in the code, a separate local execution context gets created  having its own phases and is pushed into the call stack. 
+    4.Whenever there is a function declaration in the code, a separate local execution context gets created 
+      having its own phases and is pushed into the call 
+        stack. 
     5.Once the function ends, the EC is removed from the call stack. 
     When the program ends, even the global EC is pulled out of the call stack.  
 
@@ -63,7 +72,8 @@ javaScript_EP_01
 
   undefined vs not defined in JS 🤔 | Namaste JavaScript Ep. 6  
 
-   1. Undefined is a Special Placeholder which is used to reserve memory for the variables in the memory creation phase. Even before a single line of code is executed JS engine assigns undefined to the variables. 
+   1. Undefined is a Special Placeholder which is used to reserve memory for the variables in the memory creation phase.
+      Even before a single line of code is executed JS engine assigns undefined to the variables. 
    2. Not Defined means if we try to console or access any variable which is not declared in the code then we get Not Defined error. 
    3. JS is a loosely typed language or weakly typed language means it does not attaches its variables to specific data types like in C++ and java.
    4. Remember undefined !== not defined.
@@ -71,10 +81,14 @@ javaScript_EP_01
   The Scope Chain, 🔥Scope & Lexical Environment | Namaste JavaScript Ep. 7  
 
     1.Lexical environment = EC's Local Memory + Reference to Lexical Environment of its parent. 
-    2.Lexical Environment of its parent is the scope where a function is physically present or defined. So, suppose a function x(), is defined and invoked in the GEC, when function x()'s EC is pushed in the call stack, it stores a reference to its parent's lexical environment i.e. the GEC's memory. 
-    3. Whenever a new Execution Context is pushed in the Call Stack it holds a reference to the Lexical Environment of its parent, i.e. the EC's memory from where it was invoked. 
+    2.Lexical Environment of its parent is the scope where a function is physically present or defined. So,
+     suppose a function x(), is defined and invoked in the GEC, when function x()'s EC is pushed in the call stack
+      , it stores a reference to its parent's lexical environment i.e. the GEC's memory. 
+    3. Whenever a new Execution Context is pushed in the Call Stack it holds a reference to the Lexical Environment of its parent, 
+       i.e. the EC's memory from where it was invoked. 
     4.  Global execution context holds reference to null. 
-    5. JavaScript engine first looks for the variable/function being accessed in the local scope of the function, and if not found, it keeps on searching the lexical environment of its parent until it finds the variable/function being accessed.
+    5. JavaScript engine first looks for the variable/function being accessed in the local scope of the function, and if not found,
+      it keeps on searching the lexical environment of its parent until it finds the variable/function being accessed.
     6.  The mechanism mentioned in point 4 above is called SCOPE CHAIN. 
     7. If the variable accessed is not found in the Scope Chain, then you will get the variable is not defined error in the browser's console.
 
@@ -121,7 +135,7 @@ javaScript_EP_01
        Local variable has much precedency as compare to the global variable in a function.
        
 
-   Closures in JS 🔥 | Namaste JavaScript Episode 10  
+       Closures in JS 🔥 | Namaste JavaScript Episode 10  
 
        Q. What is closure?
         A. The function bundled with its lexical environment closed to that function 
@@ -201,10 +215,11 @@ uses of closure ->
 
 
 
- setTimeout + Closures Interview Question 🔥 | Namaste 🙏 JavaScript Ep. 11 
+    setTimeout + Closures Interview Question 🔥 | Namaste 🙏 JavaScript Ep. 11 
 
            1. setTimeout stores the function in a different place and attached a timer to it, when the timer is finished it rejoins the call stack and executed.
-           2.  Without closure the var reference gives the latest value as it does not retain the original value but rather has the reference so any update in value after timeout will be shown. 
+           2.  Without closure the var reference gives the latest value as it does not retain the original value but rather has the reference so any update in 
+                value after timeout will be shown. 
            3.  If we use let/const because they have block scope, every time a new copy of variable is attached, thus this can be done without closure.
        
        
@@ -244,13 +259,13 @@ uses of closure ->
        
        Will give the same output as above
  
-CRAZY JS INTERVIEW 🤯ft. Closures | Namaste 🙏 JavaScript Ep. 12  
+      CRAZY JS INTERVIEW 🤯ft. Closures | Namaste 🙏 JavaScript Ep. 12  
   
         1.  An inner function can be directly called using two parenthesis ()() .
         2. Even parameters can be passed this way (Remember that the function needs to be returned to do this) .
         3. Closures can also be used for data hiding and encapsulation. So other code cannot access this value.
         4.  Unused variables are automatically deleted in High Level Programming language by garbage collector.
-     Closures allocate a lot of memory which cannot be deleted so this acts as a disadvantage. 
+             Closures allocate a lot of memory which cannot be deleted so this acts as a disadvantage. 
         5. Some browsers now have smart garbage collectors that automatically deletes variables that are not used outside closures.
     
     
@@ -273,7 +288,7 @@ CRAZY JS INTERVIEW 🤯ft. Closures | Namaste 🙏 JavaScript Ep. 12
     counter1.incrementCount();
     counter1.decrementCount();
     
- FIRST CLASS FUNCTIONS 🔥ft. Anonymous Functions | Namaste JavaScript Ep. 13  
+   FIRST CLASS FUNCTIONS 🔥ft. Anonymous Functions | Namaste JavaScript Ep. 13  
 
    1. What is Function Statement ? 
    
@@ -334,7 +349,7 @@ CRAZY JS INTERVIEW 🤯ft. Closures | Namaste 🙏 JavaScript Ep. 12
        Event listeners consume a lot of memory which can potentially slow down the website therefore it is good practice to remove if it is not used. 
 
 
- Asynchronous JavaScript & EVENT LOOP from scratch 🔥 | Namaste JavaScript Ep.15   
+    Asynchronous JavaScript & EVENT LOOP from scratch 🔥 | Namaste JavaScript Ep.15   
 
         1. When does the event loop actually start?
 
@@ -350,13 +365,18 @@ CRAZY JS INTERVIEW 🤯ft. Closures | Namaste 🙏 JavaScript Ep. 12
      3.  Does the web API environment stores only the callback function and pushes the same callback to queue/microtask queue?
 
        - Yes,
-         the callback functions are stored, and a reference is scheduled in the queues. Moreover, in the case of event listeners(for example click handlers), the original callbacks stay in the web API environment forever, that's why it's advised to explicitly remove the listeners when not in use so that the garbage collector does its job. 
+         the callback functions are stored, and a reference is scheduled in the queues. Moreover, 
+         in the case of event listeners(for example click handlers), the 
+      original callbacks stay in the web API environment forever, that's why it's
+       advised to explicitly remove the listeners when not in use so that the garbage 
+       collector does its job. 
 
         4.  How does it matter if we delay for setTimeout would be 0ms. Then callback will move to queue  without any wait?
          No,
           there are trust issues with setTimeout() 
     
-    .   The callback function needs to wait until the Call Stack is empty. So the 0 ms callback might have to   wait for 100ms also if the stack is busy. It's a very beautiful concept, and I've covered this in detail in the next episode of Namaste JavaScript. 
+    .   The callback function needs to wait until the Call Stack is empty. So the 0 ms callback might have to 
+       wait for 100ms also if the stack is busy. It's a very beautiful concept, and I've covered this in detail in the next episode of Namaste JavaScript. 
      
       1. WebAPIs
          window
