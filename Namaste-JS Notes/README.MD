@@ -1,4 +1,4 @@
-# javaScript_EP_01 #####
+javaScript_EP_01 
 
     How JavaScript works?
     Ans-Everything in JavaScript happens inside an "execution context".
@@ -9,7 +9,7 @@
     -Synchronous single-threaded that means JavaScript can execute one command at a time in a specific order.
 
 
-### How JavaScript Code is executed? ❤️& Call Stack | Namaste JavaScript Ep. 2 ###
+ How JavaScript Code is executed? ❤️& Call Stack | Namaste JavaScript Ep. 2 
 
          1. When JavaScript code is executed, Execution Context is created and it is called Global Execution Context. 
         2. JavaScript program is executed in TWO PHASES inside Execution Context 
@@ -26,8 +26,7 @@
         Runtime stack
         Machine stack
 
-######
-###### Hoisting in JavaScript 🔥(variables & functions) | Namaste JavaScript Ep. 3  ####
+ Hoisting in JavaScript 🔥(variables & functions) | Namaste JavaScript Ep. 3 
  
     1. In JS, before the code is executed, the variables get initialized to undefined. 
     2.  Arrow functions enact as variables and get "undefined" during the memory creation phase while functions actually get run.
@@ -44,8 +43,8 @@
     6.  Function declarations are scanned and are made available
 
 
-######
- ##### How functions work in JS ❤️ & Variable Environment | Namaste JavaScript Ep. 4  #####
+
+  How functions work in JS ❤️ & Variable Environment | Namaste JavaScript Ep. 4 
 
     1.We learnt how functions work in JS.
     2.At first a global execution context is created, which consists of Memory and code and has 2 phases: Memory allocation phase and code execution phase. 
@@ -55,24 +54,21 @@
     When the program ends, even the global EC is pulled out of the call stack.  
 
 
-######
-######  SHORTEST JS Program 🔥window & this keyword | Namaste JavaScript Ep. 5   #####
+  SHORTEST JS Program 🔥window & this keyword | Namaste JavaScript Ep. 5  
 
   1.  Shortest Program in JS: Empty file. Still, browsers make global EC and global space along with Window   object. 
   2.  Global Space: Anything that is not in a function, is in the global space. 
   3.  Variables present in a global space can be accessed by a "window" object. (like window.a) 
        In global space, (this === window) object.  
 
-#####
-  #####  undefined vs not defined in JS 🤔 | Namaste JavaScript Ep. 6   #####
+  undefined vs not defined in JS 🤔 | Namaste JavaScript Ep. 6  
 
    1. Undefined is a Special Placeholder which is used to reserve memory for the variables in the memory creation phase. Even before a single line of code is executed JS engine assigns undefined to the variables. 
    2. Not Defined means if we try to console or access any variable which is not declared in the code then we get Not Defined error. 
    3. JS is a loosely typed language or weakly typed language means it does not attaches its variables to specific data types like in C++ and java.
    4. Remember undefined !== not defined.
 
-#####
-   ######   The Scope Chain, 🔥Scope & Lexical Environment | Namaste JavaScript Ep. 7   #####
+  The Scope Chain, 🔥Scope & Lexical Environment | Namaste JavaScript Ep. 7  
 
     1.Lexical environment = EC's Local Memory + Reference to Lexical Environment of its parent. 
     2.Lexical Environment of its parent is the scope where a function is physically present or defined. So, suppose a function x(), is defined and invoked in the GEC, when function x()'s EC is pushed in the call stack, it stores a reference to its parent's lexical environment i.e. the GEC's memory. 
@@ -82,8 +78,7 @@
     6.  The mechanism mentioned in point 4 above is called SCOPE CHAIN. 
     7. If the variable accessed is not found in the Scope Chain, then you will get the variable is not defined error in the browser's console.
 
-######
- #####  let & const in JS 🔥Temporal Dead Zone | | Namaste JavaScript Ep. 8   #######
+ let & const in JS 🔥Temporal Dead Zone | | Namaste JavaScript Ep. 8  
 
      temporal dead zone refers to the period between the entering of the scope and the actual declaration of a variable using let or const.
      -> attempting to access the variable will result in a ReferenceError.
@@ -102,8 +97,7 @@
      type error ->while trying to re-initialize const variable 
      reference error -> while trying to access variable which is not there in global memory.
 
-#####
-######   BLOCK SCOPE & Shadowing in JS 🔥| Namaste JavaScript 🙏 Ep. 9   ######
+  BLOCK SCOPE & Shadowing in JS 🔥| Namaste JavaScript 🙏 Ep. 9
 
         Code inside curly bracket is called block. 
         2.  Multiple statements are grouped inside a block so it can be written where JS expects single statements like in if, else, loop, function etc. 
@@ -111,32 +105,37 @@
         4.  Shadowing of variables using var, let and const. 
         5.  The shadow should not cross the scope of original otherwise it will give error.
         6.  shadowing with let datatype to var datatype is illegal shadowing and gives error.
-        7.  var value is stored in nearest outer function or global scope and hence can be accessed outside the block as well whereas same is not the case with let and const.
+        7.  var value is stored in nearest outer function or global scope and hence can be accessed outside the block as well whereas same is not the case with 
+            let and const.
        …………………………………………………………………………………………………….
        
-       Block :-  It is used to combine multiple statement into one statement so that we can use it at those places where JavaScript expects to have single statement. 
+       Block :-  It is used to combine multiple statement into one statement so that we can use it at those places where JavaScript expects to have single 
+               statement. 
        
        Scope :-  scope of a variable or a function is the place where these are accessible. 
        
-       Block scope :-  The variables and function present within the scope of a block section. And block follows the lexical scope chain pattern while accessing the variable.
+       Block scope :-  The variables and function present within the scope of a block section. And block follows the lexical scope chain pattern while accessing 
+            the variable.
        
         Shadowing :-  Providing same name to the variable as of those variable which are present in outer scope. 
        Local variable has much precedency as compare to the global variable in a function.
        
 
-#####
-######   Closures in JS 🔥 | Namaste JavaScript Episode 10   ######
+   Closures in JS 🔥 | Namaste JavaScript Episode 10  
 
        Q. What is closure?
         A. The function bundled with its lexical environment closed to that function 
        simply function + Lexical environment and closures have very special place in runtime environment .
        
-       The fun in JavaScript is you can assign a variable for a function and also you can pass function as a parameter even you can return the function in JavaScript!! 
+       The fun in JavaScript is you can assign a variable for a function and also you can pass function as a parameter even you can return the function in 
+       JavaScript!! 
        
         Q. What does the closure do in my JavaScript programs?
        
-        A. Whenever I call a function in JavaScript the closure maintains its values(lexical env.) and function in its own runtime and when that specific function executed, it returns with own environment even the variable vanished after its execution .
-       : as variable value is changed before executing the return (the function) Value will be 100 In closures, values in variable are 'pass by reference' hence there values can be changed, and whenever comes the closure inside closure(multilevel one) we can see the function refers the 'parent' variable 
+        A. Whenever I call a function in JavaScript the closure maintains its values(lexical env.) and function in its own runtime and when that specific function 
+          executed, it returns with own environment even the variable vanished after its execution .
+       : as variable value is changed before executing the return (the function) Value will be 100 In closures, values in variable are 'pass by reference' hence 
+         there values can be changed, and whenever comes the closure inside closure(multilevel one) we can see the function refers the 'parent' variable 
        
        function x()
        {
@@ -189,8 +188,20 @@
         
         Output is 100 200
 
-####
-### setTimeout + Closures Interview Question 🔥 | Namaste 🙏 JavaScript Ep. 11  ####
+uses of closure ->
+          -> Module Design pattern.
+          -> Currying.
+          -> Functions Like Once.
+          -> Memoize.
+          -> Maintaining  State as async World.
+          -> setTimeouts.
+          -> Iterators.
+          
+
+
+
+
+ setTimeout + Closures Interview Question 🔥 | Namaste 🙏 JavaScript Ep. 11 
 
            1. setTimeout stores the function in a different place and attached a timer to it, when the timer is finished it rejoins the call stack and executed.
            2.  Without closure the var reference gives the latest value as it does not retain the original value but rather has the reference so any update in value after timeout will be shown. 
@@ -232,9 +243,8 @@
        x();
        
        Will give the same output as above
-     
-######
-  ### CRAZY JS INTERVIEW 🤯ft. Closures | Namaste 🙏 JavaScript Ep. 12   ###
+ 
+CRAZY JS INTERVIEW 🤯ft. Closures | Namaste 🙏 JavaScript Ep. 12  
   
         1.  An inner function can be directly called using two parenthesis ()() .
         2. Even parameters can be passed this way (Remember that the function needs to be returned to do this) .
@@ -263,8 +273,7 @@
     counter1.incrementCount();
     counter1.decrementCount();
     
-#####
-   ### FIRST CLASS FUNCTIONS 🔥ft. Anonymous Functions | Namaste JavaScript Ep. 13   ###
+ FIRST CLASS FUNCTIONS 🔥ft. Anonymous Functions | Namaste JavaScript Ep. 13  
 
    1. What is Function Statement ? 
    
@@ -317,8 +326,7 @@
     They are called first class citizens or first class functions because they have the ability to be stored in the variables, passed as parameters and arguments.
      They can also be returned in the function.
 
-######
-   ###  Callback Functions in JS ft. Event Listeners 🔥| Namaste JavaScript Ep. 14   ###
+  Callback Functions in JS ft. Event Listeners 🔥| Namaste JavaScript Ep. 14 
 
     1.Function that is passed on as argument to another function is called callback function. 
     2.setTimeout helps turn JS which is singlethreaded and synchronous into asynchronous. 
@@ -326,8 +334,7 @@
        Event listeners consume a lot of memory which can potentially slow down the website therefore it is good practice to remove if it is not used. 
 
 
-######
-   ###  Asynchronous JavaScript & EVENT LOOP from scratch 🔥 | Namaste JavaScript Ep.15   ###
+ Asynchronous JavaScript & EVENT LOOP from scratch 🔥 | Namaste JavaScript Ep.15   
 
         1. When does the event loop actually start?
 
@@ -366,8 +373,7 @@
         5.  First CALL STACK -> MICRO TASK QUEUE -> CALLBACK QUEUE - This is the order of execution of tasks 
         6.  Starvation - when micro task queue is again and again generating micro tasks because of which call back queue tasks are not getting chance to get executed
     
- ######
-  ###   JS Engine EXPOSED 🔥 Google's V8 Architecture 🚀 | Namaste JavaScript Ep. 16   ###
+   JS Engine EXPOSED 🔥 Google's V8 Architecture 🚀 | Namaste JavaScript Ep. 16   
 
         JS runtime environment contains all elements required to run JS.
          2.  It contains JS engine, set of API's, callback queue, microtask queue, event loop.
@@ -382,14 +388,12 @@
         copy elision in js
        inline caching in js  
 
-######
-  ### TRUST ISSUES with setTimeout() | Namaste JavaScript Ep.17  ####
+ TRUST ISSUES with setTimeout() | Namaste JavaScript Ep.17  
 
      The setTimeout function stores it in the callback queue which is executed only after call stack is empty, even if setTimeout is set to 0ms. 
      setTimeout ensures that minimum it will take the time mentioned because it may be paused due to call stack not empty. 
 
-#####
- #### Higher-Order Functions ft. Functional Programming | Namaste JavaScript Ep. 18 ####
+ Higher-Order Functions ft. Functional Programming | Namaste JavaScript Ep. 18 
 
     Follow DRY(Don't Repeat Yourself) principle while coding.
     2.  Use function to stop writing repeating line of codes. 
@@ -397,8 +401,7 @@
     4. It is this ability that function can be stored, passed and returned, they are called first class citizens. 
    If we use Array.property.function-name. This function is accessible to any array in your code. 
 
-######
-  ##### map, filter & reduce 🙏 Namaste JavaScript Ep. 19 🔥####
+map, filter & reduce 🙏 Namaste JavaScript Ep. 19 🔥
 
     1. map method is used when we want transformation of whole array. 
     2.  filter is used when we want to filter the array to obtain required value.
