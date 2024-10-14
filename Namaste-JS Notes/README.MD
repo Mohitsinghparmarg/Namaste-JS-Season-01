@@ -577,13 +577,15 @@ console.log(a)
     * Can be passed as an Argument, 
     * Can be executed inside a closured function & 
     * Can be taken as return form. For Ex - 
-    var b = function(param)
-    { 
-       return function xyz(){ 
-       console.log(" F C F "); 
-      } 
-    } 
+-
+        var b = function(param)
+        { 
+           return function xyz(){ 
+           console.log(" F C F "); 
+          } 
+        } 
  - another example:
+
     var i = function(params1){
       return function abcd(){
              console.log("this is mohit........")
@@ -600,7 +602,8 @@ console.log(a)
 
     1.Function that is passed on as argument to another function is called callback function. 
 
-      setTimeout(function(){
+   -
+        setTimeout(function(){
                console.log("setTimeOut is called successfully!!!...")
            },5000);
       function x(y){
@@ -614,7 +617,7 @@ console.log(a)
     2.setTimeout helps turn JS which is singlethreaded and synchronous into asynchronous. 
     3.Event listeners can also invoke closures with scope. 
        Event listeners consume a lot of memory which can potentially slow down the website therefore it is good practice to remove if it is not used. 
-
+   -
             function attachEventListener(){
                   let count = 0;
                   document.getElementById("clickMe").addEventListener("click",function xyz(){
