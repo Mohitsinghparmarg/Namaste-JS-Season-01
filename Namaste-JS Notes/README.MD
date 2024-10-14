@@ -116,12 +116,12 @@
    3. JS is a loosely typed language or weakly typed language means it does not attaches its variables to specific data types like in C++ and java.
    4. Remember undefined !== not defined.
           
-          console.log(a) // Refrence Error
+         console.log(a) // Refrence Error
           console.log(x); // undefined
           var x = 10;
           console.log(x); // 10
 
-          if(x === undefined){
+            if(x === undefined){
                   console.log("x is undefined");
           }
           else{
@@ -236,32 +236,32 @@
         Shadowing :-  Providing same name to the variable as of those variable which are present in outer scope. 
        Local variable has much precedency as compare to the global variable in a function.
 
-   var a = 100;
-   {
-        var x = 10;
-        let y = 20;
-        const z = 30;
-
-    console.log(x); // 10   // Shadowing
-    console.log(y);
-    console.log(z);
-  }
-    console.log(x); // 10    // Shadowing
-    console.log(y); // ReferenceError
-    console.log(z);
+           var a = 100;
+           {
+                var x = 10;
+                let y = 20;
+                const z = 30;
+        
+            console.log(x); // 10   // Shadowing
+            console.log(y);
+            console.log(z);
+          }
+            console.log(x); // 10    // Shadowing
+            console.log(y); // ReferenceError
+            console.log(z);
 
   .............................
-     let a = 100;
-  {
-    let a = 10;
-    let b = 20;
-    const c = 30;
-
-    console.log(a);  // 10  block space( Memory Scope)
-    console.log(b);
-    console.log(c);
-  }
-    console.log(a); // 100  script scope (Memory Scope)
+         let a = 100;
+          {
+            let a = 10;
+            let b = 20;
+            const c = 30;
+        
+            console.log(a);  // 10  block space( Memory Scope)
+            console.log(b);
+            console.log(c);
+          }
+            console.log(a); // 100  script scope (Memory Scope)
 
 -- this same thing will happen in const case....
 
@@ -354,8 +354,8 @@ console.log(a)
         Output is 100 200
 
 
-  ## Note Point : you also have to go through deep dive in these below concepts also , ohk 
-  -- Use of Closures :   
+## Note Point : you also have to go through deep dive in these below concepts also , ohk 
+  - Use of Closures :   
      - Module Design Pattern
      - Currying
      - Function like once
