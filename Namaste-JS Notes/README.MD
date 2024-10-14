@@ -418,58 +418,58 @@ console.log(a)
      Closures allocate a lot of memory which cannot be deleted so this acts as a disadvantage. 
         5. Some browsers now have smart garbage collectors that automatically deletes variables that are not used outside closures.
     
-................................................
-       function parent(){
+    -
+                function parent(){
+                    var a = 10;
+                  function child(){
+                          console.log(a);
+                  }
+                child();
+             }
+           parent(); 
+
+-
+          function parent(){
             var a = 10;
-          function child(){
+           function child(){
                   console.log(a);
-          }
-        child();
-     }
-   parent(); 
+           }
+           return child;
+        }
+         var b = parent();
+         b();
+         console.log(b);
 
-...............................................
-  function parent(){
-    var a = 10;
-   function child(){
-          console.log(a);
-   }
-   return child;
-}
- var b = parent();
- b();
- console.log(b);
 
-.................................
-
-function parent(y){
-      var z = 100;
-   function child(y){
-    let a = 10;
-          console.log(a,z,y);
-   }
-   
-   return child;
-}
-
- var b = parent();
- console.log(b);
- b(1000);
-......................................
-    
-     function parentOfParent(){
-              var c = 55      
+-
         function parent(y){
-            var z = 100;
-        function child(){
-          let a = 10;
-                console.log(a,c,z,y);
+              var z = 100;
+           function child(y){
+            let a = 10;
+                  console.log(a,z,y);
+           }
+           
+           return child;
         }
         
-        return child;
-      }
-      return parent;
-}
+         var b = parent();
+         console.log(b);
+         b(1000);
+
+-    
+         function parentOfParent(){
+                  var c = 55      
+            function parent(y){
+                var z = 100;
+            function child(){
+              let a = 10;
+                    console.log(a,c,z,y);
+            }
+            
+            return child;
+          }
+          return parent;
+    }
 
  var b = (parentOfParent())("hii mohit");
  b();
@@ -477,25 +477,25 @@ function parent(y){
 
 
 
-...................................................
-    
-    function Counter()
-    {
-       var count=0;
-       this.incrementCount=function ()
-         {
-          count++;
-          console.log(count);
-         }
-         this.decrementCount=function ()
-         {
-          count--;
-          console.log(count);
-         }
-    }
-    var counter1=new Counter();
-    counter1.incrementCount();
-    counter1.decrementCount();
+
+-    
+         function Counter()
+            {
+               var count=0;
+               this.incrementCount=function ()
+                 {
+                  count++;
+                  console.log(count);
+                 }
+                 this.decrementCount=function ()
+                 {
+                  count--;
+                  console.log(count);
+                 }
+            }
+            var counter1=new Counter();
+            counter1.incrementCount();
+            counter1.decrementCount();
 
   ## DisAdvantage of closures: 
      - Over Consumption of Memory because those variables are not Garbage collected untill or unless the program is end...
